@@ -1,0 +1,21 @@
+{
+    "name": "nexus-qe",
+    "version": "1.0.0",
+    "description": "Scallabble Quality Engineering Automation Framework using Playwright, TypeScript and Cucumber BDD",
+    "private": true,
+    "type": "module",
+    "scripts": {
+  "test": "node --import tsx ./node_modules/@cucumber/cucumber/bin/cucumber.js --import \"src/steps/*.ts\" --import \"src/hooks/*.ts\"",
+  "test:smoke": "node --import tsx ./node_modules/@cucumber/cucumber/bin/cucumber.js --import \"src/steps/*.ts\" --import \"src/hooks/*.ts\" --tags \"@smoke\"",
+"test:regression": "node --import tsx ./node_modules/@cucumber/cucumber/bin/cucumber.js --import \"src/steps/*.ts\" --import \"src/hooks/*.ts\" --tags \"@regression\""},
+    "devDependencies": {
+        "@cucumber/cucumber": "^13.2.1",
+        "@playwright/test": "^1.62.1",
+        "@types/node": "^26.2.0",
+        "tsx": "^4.23.12",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "dotenv": "^17.4.2"
+    }
+}
